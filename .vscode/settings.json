@@ -1,0 +1,13 @@
+{
+    "cmake.configureSettings": {
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.8.1/mingw_64/lib/cmake"
+    },
+    "cmake.generator": "Ninja",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.h": "cpp",
+        "ostream": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}

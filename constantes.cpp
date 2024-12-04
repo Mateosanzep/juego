@@ -1,5 +1,6 @@
 #include "constantes.h"
-#include <windows.h> 
+#include <stdlib.h>
+// #include <windows.h> 
 
 const int dinero[15] = {500,1000,2000,3000,5000,7500,10000,12500,15000,25000,50000,100000,250000,500000,1000000};
 
@@ -20,3 +21,7 @@ const int niveles[15][10] = {
     {145, 47, 91, 95, 131, 114, 129, 30, 9, 104},
     {71, 79, 93, 88, 144, 149, 72, 63, 11, 120}
 };
+
+int random() {
+    return rand() % 10;
+}

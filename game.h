@@ -3,21 +3,20 @@
 
 #include <vector>
 #include <string>
-#include "questions.h"
+#include "constantes.h"
+#include "config.h"
+#include "questions.h"   // Asegúrate de definir las funciones getQuestions() y getQuestion() aquí
 
-using namespace std;
+// Declaración de las funciones
+std::vector<int> Orden();
+std::string Pregunta(int index);
+std::vector<std::string> Opciones(int in);
+bool selectedOption(int inde, int option);
 
-// Declaración de la clase Game
-class Game {
-public:
-    Game();
-    void run();
-private:
-    bool sigueJugando;
-    void mostrarRonda(int ronda, const Question& question);
-    void temporizador();
-    void validarRespuesta(const string& respuesta, const Question& question, int ronda);
-    void reiniciarJuego();
-};
+
+
+// Prototipos de las funciones para obtener preguntas (puedes adaptarlas según tu implementación)
+std::vector<Question> getQuestions();
+Question getQuestion(int index);
 
 #endif // GAME_H

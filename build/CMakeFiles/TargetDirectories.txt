@@ -1,0 +1,4 @@
+C:/Users/mateo/OneDrive/Escritorio/juego/build/CMakeFiles/Millonario.dir
+C:/Users/mateo/OneDrive/Escritorio/juego/build/CMakeFiles/edit_cache.dir
+C:/Users/mateo/OneDrive/Escritorio/juego/build/CMakeFiles/rebuild_cache.dir
+C:/Users/mateo/OneDrive/Escritorio/juego/build/CMakeFiles/Millonario_autogen.dir

@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/mateo/OneDrive/Escritorio/juego/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -g -std=gnu++17 -o CMakeFiles\\Millonario.dir\\Millonario_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\build\\Millonario_autogen\\mocs_compilation.cpp",
+  "file": "C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\build\\Millonario_autogen\\mocs_compilation.cpp",
+  "output": "CMakeFiles\\Millonario.dir\\Millonario_autogen\\mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/mateo/OneDrive/Escritorio/juego/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -g -std=gnu++17 -o CMakeFiles\\Millonario.dir\\juego.cpp.obj -c C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\juego.cpp",
+  "file": "C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\juego.cpp",
+  "output": "CMakeFiles\\Millonario.dir\\juego.cpp.obj"
+},
+{
+  "directory": "C:/Users/mateo/OneDrive/Escritorio/juego/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -g -std=gnu++17 -o CMakeFiles\\Millonario.dir\\constantes.cpp.obj -c C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\constantes.cpp",
+  "file": "C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\constantes.cpp",
+  "output": "CMakeFiles\\Millonario.dir\\constantes.cpp.obj"
+},
+{
+  "directory": "C:/Users/mateo/OneDrive/Escritorio/juego/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -g -std=gnu++17 -o CMakeFiles\\Millonario.dir\\game.cpp.obj -c C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\game.cpp",
+  "file": "C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\game.cpp",
+  "output": "CMakeFiles\\Millonario.dir\\game.cpp.obj"
+},
+{
+  "directory": "C:/Users/mateo/OneDrive/Escritorio/juego/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -g -std=gnu++17 -o CMakeFiles\\Millonario.dir\\questions.cpp.obj -c C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\questions.cpp",
+  "file": "C:\\Users\\mateo\\OneDrive\\Escritorio\\juego\\questions.cpp",
+  "output": "CMakeFiles\\Millonario.dir\\questions.cpp.obj"
+}
+]

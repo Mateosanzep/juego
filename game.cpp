@@ -1,136 +1,57 @@
 #include "game.h"
-#include <iostream>
-#include <windows.h>
-#include <conio.h>
 #include <chrono>
-#include <thread>
 #include "constantes.h"
 #include "config.h"
-#include "utils.h"
+#include "questions.h"
+#include "juego.h"
+#include <QDebug>
+#include <iostream>
 
 using namespace std;
 
-Game::Game() : sigueJugando(true) {}
-
-void Game::run() {
-    do {
-        srand(time(NULL));
-        int orden[TOTAL_RONDAS];
-        for (int i = 0; i < TOTAL_RONDAS; i++) {
-            orden[i] = niveles[i][random()];
-        }
-
-        for (int j = 0; j < TOTAL_RONDAS; j++) {
-            vector<Question> questions = getQuestions();
-            int questionIndex = orden[j] - 1; 
-            Question question = getQuestion(questionIndex);
-
-            // Temporizador
-            string respuesta = ""; 
-            bool enterPresionado = false;
-            HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); 
-            SetConsoleOutputCP(65001); 
-            SetConsoleCP(65001);
-
-            limpiarPantalla(hConsole);
-            mostrarRonda(j + 1, question);
-
-            auto inicio = chrono::steady_clock::now();
-            int tiempo_restante = TIEMPO_LIMITE;
-
-            while (tiempo_restante > 0 && !enterPresionado) {
-                if (_kbhit()) {
-                    char tecla = _getch();
-                    if (tecla == '\r') {
-                        enterPresionado = true;
-                    } else if (tecla == '\b') {
-                        if (!respuesta.empty()) {
-                            respuesta.pop_back();
-                        }
-                    } else {
-                        respuesta += tecla;
-                    }
-                }
-
-                auto ahora = chrono::steady_clock::now();
-                int tiempo_transcurrido = chrono::duration_cast<chrono::seconds>(ahora - inicio).count();
-                tiempo_restante = TIEMPO_LIMITE - tiempo_transcurrido;
-
-                if (tiempo_restante >= 0) {
-                    moverCursor(hConsole, 0, 2);
-                    cout << "Tiempo: " << tiempo_restante << "s" << flush;
-                }
-
-                moverCursor(hConsole, 0, 4);
-                cout << question.questionText << endl;
-
-                for (int i = 0; i < 4; ++i) {
-                    cout << i + 1 << ". " << question.options[i] << endl;
-                }
-
-                moverCursor(hConsole, 0, 9);
-                cout << "Ingresa el número de tu respuesta: " << respuesta << flush;
-
-                this_thread::sleep_for(chrono::milliseconds(50));
-            }
-
-            // Validación de respuesta
-            validarRespuesta(respuesta, question, j);
-
-            // Si el jugador ha fallado y no desea reiniciar, termina el juego
-            if (!sigueJugando) {
-                break;
-            }
-
-            if (sigueJugando) {
-                cout << "Presiona Enter para continuar a la siguiente ronda..." << endl;
-                while (!_kbhit() || _getch() != '\r') {
-                    this_thread::sleep_for(chrono::milliseconds(50));
-                }
-            }
-        }
-    } while (sigueJugando);
-
-    cout << "Presiona Enter para salir..." << endl;
-    while (!_kbhit() || _getch() != '\r') {
-        this_thread::sleep_for(chrono::milliseconds(50));
+// Genera el orden una sola vez
+vector<int> Orden() {
+    srand(time(NULL));
+    vector<int> orden(TOTAL_RONDAS);
+    for (int i = 0; i < TOTAL_RONDAS; i++) {
+        orden[i] = niveles[i][random()];  // Generación aleatoria (depende de cómo definas `niveles`)
     }
+    return orden;
 }
 
-void Game::mostrarRonda(int ronda, const Question& question) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    moverCursor(hConsole, 0, 0);
-    cout << "Ronda " << ronda << endl;
-    cout << "Dinero a ganar: $" << dinero[ronda - 1] << endl;
+// Variable global que almacena el orden único
+vector<int> ordenUnico = Orden();
+
+string Pregunta(int index) {
+    vector<Question> questions = getQuestions();  // Asumiendo que `getQuestions()` devuelve un vector de preguntas
+    int questionIndex = ordenUnico[index] - 1;  // Obtener el índice de la pregunta
+    Question question = getQuestion(questionIndex);  // Obtener la pregunta
+
+    return question.questionText;  // Retorna el texto de la pregunta
 }
 
-void Game::validarRespuesta(const string& respuesta, const Question& question, int ronda) {
-    int userAnswer;
-    if (respuesta.empty()) {
-        cout << "Tiempo agotado." << endl;
+vector<string> Opciones(int in) {
+    vector<Question> questions = getQuestions();  // Obtener las preguntas disponibles
+    int questionIndex = ordenUnico[in] - 1;  // Obtener el índice de la pregunta
+    Question pregunta = getQuestion(questionIndex);  // Obtener la pregunta
+
+    // Crear un vector con las opciones y retornarlo
+    vector<string> opciones;
+    for (int i = 0; i < 4; ++i) {
+        opciones.push_back(pregunta.options[i]);  // Agregar cada opción al vector
+    }
+
+    return opciones;  // Retornar el vector con las opciones
+}
+
+bool selectedOption(int inde, int option) {
+    vector<Question> questions = getQuestions();  // Obtener las preguntas disponibles
+    int questionIndex = ordenUnico[inde] - 1;  // Obtener el índice de la pregunta
+    Question pregunta = getQuestion(questionIndex);
+    int respuestaCorrecta = pregunta.correctAnswerIndex;  // Obtener la respuesta correcta
+    if (option == respuestaCorrecta) {
+        return true;
     } else {
-        cout << endl;
-        userAnswer = stoi(respuesta);
-        if (userAnswer - 1 == question.correctAnswerIndex) {
-            cout << "¡Correcto! Ganaste $" << dinero[ronda] << endl;
-        } else {
-            cout << "Incorrecto. La respuesta correcta era: " 
-                 << question.options[question.correctAnswerIndex] << endl;
-            reiniciarJuego();
-        }
-    }
-}
-
-void Game::reiniciarJuego() {
-    cout << "¿Quieres reiniciar el juego? (s/n): ";
-    char respuestaReiniciar;
-    cin >> respuestaReiniciar;
-
-    if (respuestaReiniciar == 'n' || respuestaReiniciar == 'N') {
-        sigueJugando = false;
-        cout << "¡Gracias por jugar! Fin del juego." << endl;
-    } else if (respuestaReiniciar == 's' || respuestaReiniciar == 'S') {
-        cout << "Reiniciando el juego..." << endl;
-        sigueJugando = true;
+        return false;
     }
 }

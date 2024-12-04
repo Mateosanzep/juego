@@ -1,28 +1,49 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe compilar archivo activo",
-            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "label": "CMake: Build MiProyectoQt",
+            "type": "shell",
+            "command": "cmake",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
+                "--build",
+                "${workspaceFolder}/build",
+                "--target",
+                "MiProyectoQt"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Tarea generada por el depurador."
+            "problemMatcher": ["$gcc"],
+            "detail": "Genera el ejecutable usando CMake"
+        },
+        {
+            "label": "Compilar archivo activo con g++",
+            "type": "shell",
+            "command": "C:/Qt/6.8.1/mingw_64/bin/g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-I",
+                "C:/Qt/6.8.1/mingw_64/include",
+                "-L",
+                "C:/Qt/6.8.1/mingw_64/lib",
+                "-lQt6Widgets",
+                "-lQt6Core"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Compila el archivo activo usando g++"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
