@@ -1,8 +1,21 @@
 #include "constantes.h"
 #include <stdlib.h>
-// #include <windows.h> 
+#include <string>   
 
-const int dinero[15] = {500,1000,2000,3000,5000,7500,10000,12500,15000,25000,50000,100000,250000,500000,1000000};
+const std::string preguntas[15] = {
+    "Pregunta 1", "Pregunta 2", "Pregunta 3", "Pregunta 4", "Pregunta 5",
+    "Pregunta 6", "Pregunta 7", "Pregunta 8", "Pregunta 9", "Pregunta 10",
+    "Pregunta 11", "Pregunta 12", "Pregunta 13", "Pregunta 14", "Pregunta 15"
+};
+
+
+
+const std::string dinero[15] = {
+    "$500", "$1,000", "$2,000", "$3,000", "$5,000", "$7,500", "$10,000", "$12,500", 
+    "$15,000", "$25,000", "$50,000", "$100,000", "$250,000", "$500,000", "$1,000,000"
+};
+
+
 
 const int niveles[15][10] = {
     {119, 117, 59, 57, 127, 14, 52, 50, 48, 97},

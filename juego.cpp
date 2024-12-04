@@ -33,12 +33,12 @@ public:
         // Primera fila completa: Texto "Millonario"
         QLabel *titleLabel = new QLabel("Millonario");
         titleLabel->setAlignment(Qt::AlignCenter);
-        titleLabel->setStyleSheet("font-size: 30px; font-weight: bold; background-color: #FF5733; color: white;");
+        titleLabel->setStyleSheet("font-size: 30px; font-weight: bold; background-color: #000074; color: white;");
         gridLayout->addWidget(titleLabel, 0, 0, 1, 2); // Ocupa 1 fila y 2 columnas
 
         // Segunda parte: Centro (2/3 de la ventana)
         QFrame *mainArea = new QFrame;
-        mainArea->setStyleSheet("background-color: #33FF57; border: 1px solid #ccc;");
+        mainArea->setStyleSheet("background-color: #003E97;");
         gridLayout->addWidget(mainArea, 1, 0); // Ocupa la parte izquierda (2/3)
 
         // Crear un layout vertical dentro de la parte izquierda
@@ -49,11 +49,10 @@ public:
         QPushButton *button1 = new QPushButton("Publico");
         QPushButton *button2 = new QPushButton("Llamada");
         QPushButton *button3 = new QPushButton("50:50");
-
         // Diseño redondo para los botones
-        button1->setStyleSheet("border-radius: 25px; background-color: #FF5733; color: white; width: 50px; height: 50px; margin: 20px;");
-        button2->setStyleSheet("border-radius: 25px; background-color: #33FF57; color: white; width: 50px; height: 50px; margin: 20px;");
-        button3->setStyleSheet("border-radius: 25px; background-color: #3357FF; color: white; width: 50px; height: 50px; margin: 20px;");
+        button1->setStyleSheet("border-radius: 25px; background-color: #FFCE29; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
+        button2->setStyleSheet("border-radius: 25px; background-color: #FFCE29; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
+        button3->setStyleSheet("border-radius: 25px; background-color: #FFCE29; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
 
         // Conectar los botones a sus slots
         connect(button1, &QPushButton::clicked, this, &MainWindow::onButton1Click);
@@ -67,9 +66,9 @@ public:
         leftLayout->addLayout(buttonLayout);
 
         // Segundo nivel: Texto "Pregunta 1"
-        QLabel *labelPregunta = new QLabel("Pregunta 1");
+        labelPregunta = new QLabel(this);
         labelPregunta->setAlignment(Qt::AlignCenter);
-        labelPregunta->setStyleSheet("font-size: 25px;");
+        labelPregunta->setStyleSheet("font-size: 25px; font-weight: bold; color: white;");
         labelPregunta->setMargin(0);
         leftLayout->addWidget(labelPregunta);
 
@@ -80,8 +79,16 @@ public:
         // Segunda parte: Centro (2/3 de la ventana)
         labelTiempo = new QLabel(this);
         labelTiempo->setAlignment(Qt::AlignCenter);
-        labelTiempo->setStyleSheet("font-size: 18px; font-weight: bold;");
-        leftLayout->addWidget(labelTiempo);
+        labelTiempo->setStyleSheet("font-size: 25px; font-weight: bold; color: white; "
+                           "background-color: #E00000; min-width: 120px; min-height: 45px; "
+                           "border-radius: 22px;");
+
+// Usar un QHBoxLayout para centrar el QLabel
+        QHBoxLayout *hLayoutTiempo = new QHBoxLayout();
+        hLayoutTiempo->addWidget(labelTiempo);
+        hLayoutTiempo->setAlignment(Qt::AlignCenter);  // Centra el widget dentro del layout
+
+        leftLayout->addLayout(hLayoutTiempo);
 
         connect(timer, &QTimer::timeout, this, [=]() {
             tiempoRestante--;
@@ -96,9 +103,13 @@ public:
 
         labelPregunta2 = new QLabel(this);
         labelPregunta2->setAlignment(Qt::AlignCenter);
-        labelPregunta2->setStyleSheet("font-size: 25px; font-weight: bold; max-width: 900px");
+        labelPregunta2->setStyleSheet("font-size: 25px; font-weight: bold; max-width: 900px; min-width: 650px; min-height: 45px; border-radius: 22px; color: white; background-color: #502993; border: 2px solid white;");
         labelPregunta2->setWordWrap(true);
-        leftLayout->addWidget(labelPregunta2);
+        QHBoxLayout *hLayoutPregunta = new QHBoxLayout();
+        hLayoutPregunta->addWidget(labelPregunta2);
+        hLayoutPregunta->setAlignment(Qt::AlignCenter);  // Centra el widget dentro del layout
+
+        leftLayout->addLayout(hLayoutPregunta);
 
         // Quinto nivel: Grilla 2x2 con 4 botones
         QGridLayout *gridLayout2x2 = new QGridLayout;
@@ -110,11 +121,11 @@ public:
 
 
         // Diseño redondo para los botones de la grilla 2x2
-        button4->setStyleSheet("font-size: 20px; font-weight: bold; border-radius: 50px; background-color: #FF5733; color: white; width: 100px; height: 100px; margin: 20px;");
-        button5->setStyleSheet("font-size: 20px; font-weight: bold; border-radius: 50px; background-color: #33FF57; color: white; width: 100px; height: 100px; margin: 20px;");
-        button6->setStyleSheet("font-size: 20px; font-weight: bold; border-radius: 50px; background-color: #3357FF; color: white; width: 100px; height: 100px; margin: 20px;");
-        button7->setStyleSheet("font-size: 20px; font-weight: bold; border-radius: 50px; background-color: #FF8C00; color: white; width: 100px; height: 100px; margin: 20px;");
-
+        button4->setStyleSheet("font-size: 25px; font-weight: bold; border-radius: 50px; background-color: #8C65CF; border: 2px solid white; color: white; width: 100px; height: 100px; margin: 20px;");
+        button5->setStyleSheet("font-size: 25px; font-weight: bold; border-radius: 50px; background-color: #8C65CF; border: 2px solid white; color: white; width: 100px; height: 100px; margin: 20px;");
+        button6->setStyleSheet("font-size: 25px; font-weight: bold; border-radius: 50px; background-color: #8C65CF; border: 2px solid white; color: white; width: 100px; height: 100px; margin: 20px;");
+        button7->setStyleSheet("font-size: 25px; font-weight: bold; border-radius: 50px; background-color: #8C65CF; border: 2px solid white; color: white; width: 100px; height: 100px; margin: 20px;");
+        
         // Conectar los botones de la grilla
         connect(button4, &QPushButton::clicked, this, [=]() { onOptionButtonClick(0); });
         connect(button5, &QPushButton::clicked, this, [=]() { onOptionButtonClick(1); });
@@ -135,21 +146,34 @@ public:
 
         // Tercera parte: Lado derecho (1/3 de la ventana)
         QFrame *sideArea = new QFrame;
-        sideArea->setStyleSheet("background-color: #3357FF; border: 1px solid #aaa;");
+        sideArea->setStyleSheet("background-color: #3357FF;");
         gridLayout->addWidget(sideArea, 1, 1); // Ocupa la parte derecha (1/3)
 
         // Crear un layout vertical para los 15 QLabels en la parte derecha
         QVBoxLayout *rightLayout = new QVBoxLayout;
+        premio = new QLabel("Premio");
+        premio->setAlignment(Qt::AlignCenter);
+        premio->setStyleSheet("font-size: 23px; margin: 2px; color: black; background-color: #FFCE29; border-radius: 5px; max-width: 400px; min-width: 200px; min-height: 40px; font-weight: bold;");
+        QHBoxLayout *hLayoutPremio = new QHBoxLayout();
+        hLayoutPremio->addWidget(premio);
+        hLayoutPremio->setAlignment(Qt::AlignCenter);  // Centra el widget dentro del layout
+
+        rightLayout->addLayout(hLayoutPremio);
 
         
         // Crear 15 QLabel con el texto "$100"
         for (int i = 14; i >= 0; --i) {
-            QLabel *label = new QLabel(QString::number(dinero[i]));
-            label->setAlignment(Qt::AlignCenter);
-            label->setStyleSheet("font-size: 18px; margin: 10px; color: white; background-color: #4CAF50; border-radius: 5px;");
-            rightLayout->addWidget(label);
+            money[i] = new QLabel(QString::fromStdString(dinero[i]));
+            money[i]->setAlignment(Qt::AlignCenter);
+            money[i]->setStyleSheet("font-size: 18px; margin: 1px; color: white; background-color: #4CAF50; border-radius: 5px;  min-height: 30px;");
+            int width = 200 - (14 - i) * 10; // Aumentar el ancho a medida que subimos en la pirámide
+            money[i]->setMinimumWidth(width);
+            QHBoxLayout *hLayout = new QHBoxLayout();
+            hLayout->addWidget(money[i]);
+            hLayout->setAlignment(Qt::AlignCenter);
+        
+            rightLayout->addLayout(hLayout);
             }
-
 
         // Asignar el layout a la parte derecha
         sideArea->setLayout(rightLayout);
@@ -181,6 +205,9 @@ private slots:
 
 private:
     int ronda;
+    QLabel *premio;
+    QLabel *money[15];
+    QLabel *labelPregunta;
     QLabel *labelPregunta2;
     QLabel *labelTiempo;
     QPushButton *button4, *button5, *button6, *button7;
@@ -203,12 +230,28 @@ private slots:
             }
     }
     void actualizarPreguntas() {
+        labelPregunta->setText(QString::fromStdString(preguntas[ronda]));
         labelPregunta2->setText(QString::fromStdString(Pregunta(ronda)));
         vector<string> opcionesPregunta = Opciones(ronda);
         button4->setText(QString::fromStdString(opcionesPregunta[0]));
         button5->setText(QString::fromStdString(opcionesPregunta[1]));
         button6->setText(QString::fromStdString(opcionesPregunta[2]));
         button7->setText(QString::fromStdString(opcionesPregunta[3]));
+        for (int i = 0; i < 15; ++i) {
+        if (i < ronda) {
+            money[i]->setStyleSheet("font-size: 18px; margin: 1px; color: white; background-color: #26B12C; border-radius: 5px; min-height: 30px;"); 
+            int width = 200 - (14 - i) * 10; // Aumentar el ancho a medida que subimos en la pirámide
+            money[i]->setMinimumWidth(width);// Cambiar a negro si la ronda es mayor
+        } else if (i==ronda){
+            money[i]->setStyleSheet("font-size: 18px; margin: 1px; color: white; background-color: #FF7429; border-radius: 5px; min-height: 30px;");
+            int width = 200 - (14 - i) * 10; // Aumentar el ancho a medida que subimos en la pirámide
+            money[i]->setMinimumWidth(width);// Cambiar a negro si la ronda es mayor
+        }else{
+            money[i]->setStyleSheet("font-size: 18px; margin: 1px; color: white; background-color: #65C0FF; border-radius: 5px; min-height: 30px;");
+            int width = 200 - (14 - i) * 10; // Aumentar el ancho a medida que subimos en la pirámide
+            money[i]->setMinimumWidth(width); // Color original
+        }
+    }
     }
     void reiniciarTemporizador() {
         tiempoRestante = TIEMPO_LIMITE; // Reiniciar el tiempo a 30 segundos
