@@ -4,8 +4,11 @@
 #include "config.h"
 #include "questions.h"
 #include "juego.h"
-#include <QDebug>
+#include "tiempo.h"
+#include "mal.h"
 #include <iostream>
+#include "ganaste.h"
+#include <random>
 
 using namespace std;
 
@@ -54,4 +57,30 @@ bool selectedOption(int inde, int option) {
     } else {
         return false;
     }
+}
+std::string imprimirCorrecta(int id){
+        vector<Question> questions = getQuestions();  // Obtener las preguntas disponibles
+        int questionIndex = ordenUnico[id] - 1;  // Obtener el índice de la pregunta
+        Question pregunta = getQuestion(questionIndex);
+        int respuestaCorrecta = pregunta.correctAnswerIndex;
+        std::string opcionCorrecta = pregunta.options[respuestaCorrecta];
+        return opcionCorrecta;
+    };
+
+int generarOpcionAleatoria(int opcionProbable) {
+    // Vector de números posibles
+    vector<int> numeros = {0, 1, 2, 3};
+    // Pesos base para cada número
+    vector<int> pesos = {1, 1, 1, 1};
+    // Aumentamos el peso del número deseado
+    if (opcionProbable >= 0 && opcionProbable) {
+        pesos[opcionProbable] = 5; // Este número tiene más probabilidad
+    }
+    // Crear una distribución discreta basada en los pesos
+    random_device rd; // Generador de números aleatorios
+    mt19937 gen(rd()); // Motor de aleatoriedad
+    discrete_distribution<> distribucion(pesos.begin(), pesos.end());
+    // Generar el número aleatorio
+    
+    return numeros[distribucion(gen)];
 }

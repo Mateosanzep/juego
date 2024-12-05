@@ -13,7 +13,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 # Agrega tu ejecutable
-add_executable(Millonario juego.cpp constantes.cpp game.cpp questions.cpp)
+# add_executable(Millonario main.cpp Ventana1.cpp Ventana2.cpp)
+add_executable(Millonario juego.cpp constantes.cpp game.cpp questions.cpp main.cpp intro.cpp tiempo.cpp mal.cpp ganaste.cpp juego.h constantes.h game.h questions.h intro.h tiempo.h mal.h ganaste.h)
 
 set_target_properties(Millonario PROPERTIES
     AUTOMOC ON

@@ -148,7 +148,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/MiProyectoQt
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Millonario
 
 //Run-time variable data (LOCALSTATEDIR/run)
 CMAKE_INSTALL_RUNSTATEDIR:PATH=
@@ -291,15 +291,6 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
-
-//Value Computed by CMake
-MiProyectoQt_BINARY_DIR:STATIC=C:/Users/mateo/OneDrive/Escritorio/juego/build
-
-//Value Computed by CMake
-MiProyectoQt_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-MiProyectoQt_SOURCE_DIR:STATIC=C:/Users/mateo/OneDrive/Escritorio/juego
 
 //Value Computed by CMake
 Millonario_BINARY_DIR:STATIC=C:/Users/mateo/OneDrive/Escritorio/juego/build
@@ -1333,5 +1324,5 @@ _CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/MiProyectoQt
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/Millonario
 

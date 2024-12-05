@@ -1,11 +1,6 @@
 C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.moc: C:/Users/mateo/OneDrive/Escritorio/juego/juego.cpp \
   C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/moc_predefs.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QDebug \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QList \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QRect \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QSize \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QSizeF \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
@@ -38,16 +33,10 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcontiguouscache.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qcoreapplication.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdatastream.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdebug.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qendian.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qfloat16.h \
@@ -66,7 +55,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlist.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qmap.h \
@@ -76,7 +64,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qnamespace.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qnumeric.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qobject_impl.h \
@@ -139,8 +126,7 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qyieldcpu.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/QScreen \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.8.1/mingw_64/include/QtGui/QPalette \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qbrush.h \
@@ -149,11 +135,8 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qfontmetrics.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/qguiapplication.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qimage.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qpalette.h \
@@ -164,8 +147,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qrgba64.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/qscreen.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/qscreen_platform.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtguiexports.h \
@@ -173,7 +154,7 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QApplication \
+  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QFrame \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QHBoxLayout \
@@ -183,7 +164,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractbutton.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qapplication.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
@@ -202,8 +182,12 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/Users/mateo/OneDrive/Escritorio/juego/config.h \
   C:/Users/mateo/OneDrive/Escritorio/juego/constantes.h \
   C:/Users/mateo/OneDrive/Escritorio/juego/game.h \
+  C:/Users/mateo/OneDrive/Escritorio/juego/ganaste.h \
+  C:/Users/mateo/OneDrive/Escritorio/juego/intro.h \
   C:/Users/mateo/OneDrive/Escritorio/juego/juego.h \
+  C:/Users/mateo/OneDrive/Escritorio/juego/mal.h \
   C:/Users/mateo/OneDrive/Escritorio/juego/questions.h \
+  C:/Users/mateo/OneDrive/Escritorio/juego/tiempo.h \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
   C:/msys64/ucrt64/include/_mingw_off_t.h \
@@ -224,8 +208,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/bits/allocator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_base.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_lockfree_defines.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h \
@@ -247,12 +229,9 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable_policy.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/invoke.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc \
-  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/memory_resource.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/memoryfwd.h \
@@ -260,7 +239,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/bits/nested_exception.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/new_allocator.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/node_handle.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream_insert.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/parse_numbers.h \
   C:/msys64/ucrt64/include/c++/13.2.0/bits/postypes.h \
@@ -322,7 +300,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/cstring \
   C:/msys64/ucrt64/include/c++/13.2.0/ctime \
   C:/msys64/ucrt64/include/c++/13.2.0/cwchar \
-  C:/msys64/ucrt64/include/c++/13.2.0/cwctype \
   C:/msys64/ucrt64/include/c++/13.2.0/debug/assertions.h \
   C:/msys64/ucrt64/include/c++/13.2.0/debug/debug.h \
   C:/msys64/ucrt64/include/c++/13.2.0/exception \
@@ -335,10 +312,7 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/ext/type_traits.h \
   C:/msys64/ucrt64/include/c++/13.2.0/functional \
   C:/msys64/ucrt64/include/c++/13.2.0/initializer_list \
-  C:/msys64/ucrt64/include/c++/13.2.0/ios \
   C:/msys64/ucrt64/include/c++/13.2.0/iosfwd \
-  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
-  C:/msys64/ucrt64/include/c++/13.2.0/istream \
   C:/msys64/ucrt64/include/c++/13.2.0/iterator \
   C:/msys64/ucrt64/include/c++/13.2.0/limits \
   C:/msys64/ucrt64/include/c++/13.2.0/list \
@@ -347,7 +321,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/new \
   C:/msys64/ucrt64/include/c++/13.2.0/numeric \
   C:/msys64/ucrt64/include/c++/13.2.0/optional \
-  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
   C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
   C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_memory_defs.h \
@@ -383,8 +356,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
-  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -417,7 +388,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include/juego.
   C:/msys64/ucrt64/include/time.h \
   C:/msys64/ucrt64/include/vadefs.h \
   C:/msys64/ucrt64/include/wchar.h \
-  C:/msys64/ucrt64/include/wctype.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdbool.h \

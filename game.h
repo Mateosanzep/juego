@@ -12,7 +12,7 @@ std::vector<int> Orden();
 std::string Pregunta(int index);
 std::vector<std::string> Opciones(int in);
 bool selectedOption(int inde, int option);
-
+std::string imprimirCorrecta(int id);
 
 
 // Prototipos de las funciones para obtener preguntas (puedes adaptarlas según tu implementación)

@@ -89,6 +89,46 @@ build CMakeFiles/Millonario.dir/questions.cpp.obj: CXX_COMPILER__Millonario_unsc
   OBJECT_DIR = CMakeFiles\Millonario.dir
   OBJECT_FILE_DIR = CMakeFiles\Millonario.dir
 
+build CMakeFiles/Millonario.dir/main.cpp.obj: CXX_COMPILER__Millonario_unscanned_Debug C$:/Users/mateo/OneDrive/Escritorio/juego/main.cpp || cmake_object_order_depends_target_Millonario
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Millonario.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Millonario.dir
+  OBJECT_FILE_DIR = CMakeFiles\Millonario.dir
+
+build CMakeFiles/Millonario.dir/intro.cpp.obj: CXX_COMPILER__Millonario_unscanned_Debug C$:/Users/mateo/OneDrive/Escritorio/juego/intro.cpp || cmake_object_order_depends_target_Millonario
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Millonario.dir\intro.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Millonario.dir
+  OBJECT_FILE_DIR = CMakeFiles\Millonario.dir
+
+build CMakeFiles/Millonario.dir/tiempo.cpp.obj: CXX_COMPILER__Millonario_unscanned_Debug C$:/Users/mateo/OneDrive/Escritorio/juego/tiempo.cpp || cmake_object_order_depends_target_Millonario
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Millonario.dir\tiempo.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Millonario.dir
+  OBJECT_FILE_DIR = CMakeFiles\Millonario.dir
+
+build CMakeFiles/Millonario.dir/mal.cpp.obj: CXX_COMPILER__Millonario_unscanned_Debug C$:/Users/mateo/OneDrive/Escritorio/juego/mal.cpp || cmake_object_order_depends_target_Millonario
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Millonario.dir\mal.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Millonario.dir
+  OBJECT_FILE_DIR = CMakeFiles\Millonario.dir
+
+build CMakeFiles/Millonario.dir/ganaste.cpp.obj: CXX_COMPILER__Millonario_unscanned_Debug C$:/Users/mateo/OneDrive/Escritorio/juego/ganaste.cpp || cmake_object_order_depends_target_Millonario
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Millonario.dir\ganaste.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Millonario.dir
+  OBJECT_FILE_DIR = CMakeFiles\Millonario.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Millonario
@@ -97,7 +137,7 @@ build CMakeFiles/Millonario.dir/questions.cpp.obj: CXX_COMPILER__Millonario_unsc
 #############################################
 # Link the executable Millonario.exe
 
-build Millonario.exe: CXX_EXECUTABLE_LINKER__Millonario_Debug CMakeFiles/Millonario.dir/Millonario_autogen/mocs_compilation.cpp.obj CMakeFiles/Millonario.dir/juego.cpp.obj CMakeFiles/Millonario.dir/constantes.cpp.obj CMakeFiles/Millonario.dir/game.cpp.obj CMakeFiles/Millonario.dir/questions.cpp.obj | C$:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Core.a || Millonario_autogen
+build Millonario.exe: CXX_EXECUTABLE_LINKER__Millonario_Debug CMakeFiles/Millonario.dir/Millonario_autogen/mocs_compilation.cpp.obj CMakeFiles/Millonario.dir/juego.cpp.obj CMakeFiles/Millonario.dir/constantes.cpp.obj CMakeFiles/Millonario.dir/game.cpp.obj CMakeFiles/Millonario.dir/questions.cpp.obj CMakeFiles/Millonario.dir/main.cpp.obj CMakeFiles/Millonario.dir/intro.cpp.obj CMakeFiles/Millonario.dir/tiempo.cpp.obj CMakeFiles/Millonario.dir/mal.cpp.obj CMakeFiles/Millonario.dir/ganaste.cpp.obj | C$:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Core.a || Millonario_autogen
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Millonario.dir

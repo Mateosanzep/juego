@@ -270,15 +270,39 @@
 			null
 		],
 		[
+			"C:/Users/mateo/OneDrive/Escritorio/juego/ganaste.h",
+			"Mu",
+			"EWIEGA46WW/moc_ganaste.cpp",
+			null
+		],
+		[
+			"C:/Users/mateo/OneDrive/Escritorio/juego/intro.h",
+			"Mu",
+			"EWIEGA46WW/moc_intro.cpp",
+			null
+		],
+		[
 			"C:/Users/mateo/OneDrive/Escritorio/juego/juego.h",
 			"Mu",
 			"EWIEGA46WW/moc_juego.cpp",
 			null
 		],
 		[
+			"C:/Users/mateo/OneDrive/Escritorio/juego/mal.h",
+			"Mu",
+			"EWIEGA46WW/moc_mal.cpp",
+			null
+		],
+		[
 			"C:/Users/mateo/OneDrive/Escritorio/juego/questions.h",
 			"Mu",
 			"EWIEGA46WW/moc_questions.cpp",
+			null
+		],
+		[
+			"C:/Users/mateo/OneDrive/Escritorio/juego/tiempo.h",
+			"Mu",
+			"EWIEGA46WW/moc_tiempo.cpp",
 			null
 		]
 	],
@@ -354,8 +378,13 @@
 	[
 		[ "C:/Users/mateo/OneDrive/Escritorio/juego/constantes.cpp", "Mu", null ],
 		[ "C:/Users/mateo/OneDrive/Escritorio/juego/game.cpp", "Mu", null ],
+		[ "C:/Users/mateo/OneDrive/Escritorio/juego/ganaste.cpp", "Mu", null ],
+		[ "C:/Users/mateo/OneDrive/Escritorio/juego/intro.cpp", "Mu", null ],
 		[ "C:/Users/mateo/OneDrive/Escritorio/juego/juego.cpp", "Mu", null ],
-		[ "C:/Users/mateo/OneDrive/Escritorio/juego/questions.cpp", "Mu", null ]
+		[ "C:/Users/mateo/OneDrive/Escritorio/juego/main.cpp", "Mu", null ],
+		[ "C:/Users/mateo/OneDrive/Escritorio/juego/mal.cpp", "Mu", null ],
+		[ "C:/Users/mateo/OneDrive/Escritorio/juego/questions.cpp", "Mu", null ],
+		[ "C:/Users/mateo/OneDrive/Escritorio/juego/tiempo.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0
