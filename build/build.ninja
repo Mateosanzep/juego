@@ -141,7 +141,7 @@ build Millonario.exe: CXX_EXECUTABLE_LINKER__Millonario_Debug CMakeFiles/Millona
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Millonario.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\mateo\OneDrive\Escritorio\juego\build && C:\Qt\6.8.1\mingw_64\lib\cmake\..\..\bin\windeployqt.exe C:/Users/mateo/OneDrive/Escritorio/juego/build/Millonario.exe"
   PRE_LINK = cd .
   TARGET_FILE = Millonario.exe
   TARGET_IMPLIB = libMillonario.dll.a

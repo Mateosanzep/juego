@@ -2,6 +2,7 @@
 C:/Users/mateo/OneDrive/Escritorio/juego/constantes.h
 C:/Users/mateo/OneDrive/Escritorio/juego/game.h
 C:/Users/mateo/OneDrive/Escritorio/juego/questions.h
+C:/Users/mateo/OneDrive/Escritorio/juego/constantes.cpp
 C:/Users/mateo/OneDrive/Escritorio/juego/intro.cpp
  mid:intro.moc
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/QTimer
@@ -400,7 +401,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/intro.cpp
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
-C:/Users/mateo/OneDrive/Escritorio/juego/constantes.cpp
 C:/Users/mateo/OneDrive/Escritorio/juego/game.cpp
 C:/Users/mateo/OneDrive/Escritorio/juego/juego.cpp
  mid:juego.moc
@@ -800,6 +800,7 @@ C:/Users/mateo/OneDrive/Escritorio/juego/juego.cpp
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+C:/Users/mateo/OneDrive/Escritorio/juego/main.cpp
 C:/Users/mateo/OneDrive/Escritorio/juego/juego.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/QTimer
@@ -1174,7 +1175,6 @@ C:/Users/mateo/OneDrive/Escritorio/juego/juego.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h
  mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
-C:/Users/mateo/OneDrive/Escritorio/juego/main.cpp
 C:/Users/mateo/OneDrive/Escritorio/juego/questions.cpp
 C:/Users/mateo/OneDrive/Escritorio/juego/intro.h
  mmc:Q_OBJECT

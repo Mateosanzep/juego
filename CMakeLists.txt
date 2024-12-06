@@ -22,3 +22,11 @@ set_target_properties(Millonario PROPERTIES
 
 # Vincula las bibliotecas de Qt necesarias
 target_link_libraries(Millonario PRIVATE Qt6::Widgets)
+
+# poner un build step para windows, esto es para que prepare el ejecutable con "windeployqt.exe"
+if(WIN32)
+    add_custom_command(TARGET Millonario POST_BUILD 
+        COMMAND "${CMAKE_PREFIX_PATH}/../../bin/windeployqt.exe" "$<TARGET_FILE:Millonario>"
+    )
+endif()
+
