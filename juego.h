@@ -29,10 +29,12 @@ private:
     QLabel *labelPregunta;
     QLabel *labelPregunta2;
     QLabel *labelTiempo;
-    QPushButton *button4, *button5, *button6, *button7;
+    QPushButton *button4, *button5, *button6, *button7, *button1, *button2, *button3;
     QTimer *timer; // Temporizador
     int tiempoRestante; // Tiempo restante
     bool dialogOpened = false;
+    bool quitarRespuestas = false;
+    bool cambioRespuesta = false;
 };
 
 #endif // JUEGO_H

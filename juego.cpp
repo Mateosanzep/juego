@@ -45,9 +45,12 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
 
     // Primer nivel: Tres botones en una fila horizontal
     QHBoxLayout *buttonLayout = new QHBoxLayout;
-    QPushButton *button1 = new QPushButton("Publico");
-    QPushButton *button2 = new QPushButton("Llamada");
-    QPushButton *button3 = new QPushButton("50:50");
+    button1 = new QPushButton(this);
+    button2 = new QPushButton(this);
+    button3 = new QPushButton(this);
+    button1->setText(QString("Publico"));
+    button2->setText(QString("Llamada"));
+    button3->setText(QString("50:50"));
     // Diseño redondo para los botones
     button1->setStyleSheet("border-radius: 25px; background-color: #FFCE29; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
     button2->setStyleSheet("border-radius: 25px; background-color: #FFCE29; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
@@ -199,21 +202,41 @@ void MainWindow::onButton1Click() {
 
     // Marcar que el diálogo ya se abrió
     dialogOpened = true;
+    button1->setStyleSheet("border-radius: 25px; background-color: #EC2300; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
 
     // Crear un diálogo no modal
     QDialog *dialog = new QDialog(this);
     dialog->setWindowTitle("Público");
     dialog->setAttribute(Qt::WA_DeleteOnClose); // Asegura que se elimine automáticamente al cerrarlo
 
+    int correcta = indiceCorrecto(ronda);
+    vector<int> contador(4, 0);
+    for (int i = 0; i < 30; i++) {
+        int numeroAleatorio = generarOpcionAleatoria(correcta);
+        contador[numeroAleatorio]++;
+    }
+    vector<string> opcionesPregunta = Opciones(ronda);
+
     // Crear un layout para el contenido del diálogo
     QVBoxLayout *layout = new QVBoxLayout(dialog);
 
     // Agregar un texto al diálogo
-    QLabel *label = new QLabel("¡El público te ayudará!", dialog);
+    QLabel *label = new QLabel("¡El público te ayudará, pero no te dejes llevar!", dialog);
+    label->setStyleSheet("font-size: 30px; font-weight: bold; color: white; margin: 10px;");
     layout->addWidget(label);
+    for (int i = 0; i < 4; i++) {
+        string numeroString = to_string(contador[i]);
+        string opcionVariable = opcionesPregunta[i];
+        string labelCorrecta = numeroString + " Personas votaron por: " + opcionVariable;
+        QLabel *labelPersonas = new QLabel(QString::fromStdString(labelCorrecta), dialog);
+        labelPersonas->setStyleSheet("font-size: 20px; font-weight: bold; color: white; margin: 10px;");
+        layout->addWidget(labelPersonas);
+        // std::cout << "Número " << i << ": " << contador[i] << " veces\n";
+    }
 
     // Crear un botón para cerrar el diálogo
     QPushButton *closeButton = new QPushButton("Cerrar", dialog);
+    closeButton->setStyleSheet("border-radius: 25px; background-color: #26B12C; color: #FFF; font-weight: bold; font-size: 18px; min-width: 100px; height: 50px; margin: 20px;");
     layout->addWidget(closeButton);
 
     // Conectar el botón para cerrar el diálogo
@@ -225,15 +248,66 @@ void MainWindow::onButton1Click() {
 
 
 void MainWindow::onButton2Click() {
-    // Acción cuando se presiona el Botón 2 (Llamada)
-    QMessageBox::information(this, "Llamada", "¡Llamando a un amigo!");
-    // Aquí puedes agregar la lógica para activar la ayuda de llamada (por ejemplo, mostrar una respuesta sugerida por un amigo)
+    if (cambioRespuesta) {
+        // Si ya se abrió, no hacer nada
+        return;
+    }
+    button2->setStyleSheet("border-radius: 25px; background-color: #EC2300; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
+
+    // Marcar que el diálogo ya se abrió
+    cambioRespuesta = true;
+    
+    QDialog *dialog = new QDialog(this);
+    dialog->setWindowTitle("Llamada");
+    dialog->setAttribute(Qt::WA_DeleteOnClose); // Asegura que se elimine automáticamente al cerrarlo
+
+    // Crear un layout para el contenido del diálogo
+    QVBoxLayout *layout = new QVBoxLayout(dialog);
+
+    // Agregar un texto al diálogo
+    QLabel *label = new QLabel("Llamando a un experto...", dialog);
+    label->setStyleSheet("font-size: 30px; font-weight: bold; color: white; margin: 10px;");
+    layout->addWidget(label);
+
+    string respuesta = imprimirCorrecta(ronda);
+    
+    string labelRespuesta = "...mmm, bueno, es una pregunta dificil, pero creo que es: " + respuesta + ", ojala este bien, suerte, bye";
+    QLabel *labelLlamada = new QLabel(QString::fromStdString(labelRespuesta), dialog);
+    labelLlamada->setStyleSheet("font-size: 20px; font-weight: bold; color: white; margin: 10px;");
+    layout->addWidget(labelLlamada);
+
+    // Crear un botón para cerrar el diálogo
+    QPushButton *closeButton = new QPushButton("Cerrar", dialog);
+    closeButton->setStyleSheet("border-radius: 25px; background-color: #26B12C; color: #FFF; font-weight: bold; font-size: 18px; min-width: 100px; height: 50px; margin: 20px;");
+    layout->addWidget(closeButton);
+
+    // Conectar el botón para cerrar el diálogo
+    connect(closeButton, &QPushButton::clicked, dialog, &QDialog::close);
+
+    // Mostrar el diálogo de forma no modal
+    dialog->show();
+
+    
 }
 
-void MainWindow::onButton3Click() {
-    // Acción cuando se presiona el Botón 3 (50:50)
-    QMessageBox::information(this, "50:50", "¡Te quedan 2 opciones!");
-    // Aquí puedes agregar la lógica para activar la ayuda 50:50 (por ejemplo, eliminar dos opciones incorrectas)
+void MainWindow::onButton3Click() { // 50:50
+if (quitarRespuestas) {
+        // Si ya se abrió, no hacer nada
+        return;
+    }
+    button3->setStyleSheet("border-radius: 25px; background-color: #EC2300; color: #000000; font-weight: bold; font-size: 18px; width: 50px; height: 50px; margin: 20px;");
+
+    // Marcar que el diálogo ya se abrió
+    quitarRespuestas = true;
+    int respuesta = indiceCorrecto(ronda);
+    if (respuesta == 2 || respuesta == 3){
+            button4 -> hide();
+            button5 -> hide();
+        }
+    else if (respuesta == 0|| respuesta == 1){
+        button7 -> hide();
+        button6 -> hide();
+    }
 }
 
 void MainWindow::onOptionButtonClick(int option) {
@@ -264,8 +338,14 @@ void MainWindow::actualizarPreguntas() {
     labelPregunta->setText(QString::fromStdString(preguntas[ronda])); // Establecer el texto de la pregunta
     labelPregunta2->setText(QString::fromStdString(Pregunta(ronda))); // Establecer el texto de la pregunta secundaria
 
+
     // Obtener las opciones de la pregunta actual
     vector<string> opcionesPregunta = Opciones(ronda);
+
+    button4->show();
+    button5->show();
+    button6->show();
+    button7->show();
 
     // Asignar las opciones a los botones
     button4->setText(QString::fromStdString(opcionesPregunta[0]));

@@ -47,6 +47,8 @@ vector<string> Opciones(int in) {
     return opciones;  // Retornar el vector con las opciones
 }
 
+
+
 bool selectedOption(int inde, int option) {
     vector<Question> questions = getQuestions();  // Obtener las preguntas disponibles
     int questionIndex = ordenUnico[inde] - 1;  // Obtener el índice de la pregunta
@@ -58,6 +60,14 @@ bool selectedOption(int inde, int option) {
         return false;
     }
 }
+
+int indiceCorrecto(int index) {
+    vector<Question> questions = getQuestions();  // Obtener las preguntas disponibles
+    int questionIndex = ordenUnico[index] - 1;  // Obtener el índice de la pregunta
+    Question pregunta = getQuestion(questionIndex);
+    int respuestaCorrecta = pregunta.correctAnswerIndex;  // Obtener la respuesta correcta
+    return respuestaCorrecta;
+};
 std::string imprimirCorrecta(int id){
         vector<Question> questions = getQuestions();  // Obtener las preguntas disponibles
         int questionIndex = ordenUnico[id] - 1;  // Obtener el índice de la pregunta
@@ -74,13 +84,13 @@ int generarOpcionAleatoria(int opcionProbable) {
     vector<int> pesos = {1, 1, 1, 1};
     // Aumentamos el peso del número deseado
     if (opcionProbable >= 0 && opcionProbable) {
-        pesos[opcionProbable] = 5; // Este número tiene más probabilidad
+        pesos[opcionProbable] = 10; // Este número tiene más probabilidad
     }
     // Crear una distribución discreta basada en los pesos
     random_device rd; // Generador de números aleatorios
     mt19937 gen(rd()); // Motor de aleatoriedad
     discrete_distribution<> distribucion(pesos.begin(), pesos.end());
     // Generar el número aleatorio
-    
+
     return numeros[distribucion(gen)];
 }
